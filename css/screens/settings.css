@@ -1,0 +1,42 @@
+@keyframes chooseGrow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+    color: var(--green);
+  }
+}
+
+@keyframes listMoveIn {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.settings__setting {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: listMoveIn 2s ease-in-out;
+}
+
+.settings__setting:hover {
+  animation: chooseGrow 0.8s ease-in-out forwards;
+}
+
+.settings__setting i {
+  opacity: 0.8;
+  margin-right: 20px;
+  font-size: 22px;
+}
+
+.settings__setting-column:last-child {
+  color: var(--green);
+}
